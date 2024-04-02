@@ -1,0 +1,71 @@
+.container-min {
+    background-color: rgb(184, 184, 184);
+    width: 100vw; 
+    height: 15vh; 
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 15px;
+    border-radius: 50px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: larger;
+  }
+.container {
+    display: flex;
+    justify-content: space-between;
+    width: 100vw; 
+    height: 70vh; 
+    justify-content: center;
+    border-radius: 30px;
+    margin-top: 20px;
+  }
+  
+  .left-div, .right-div {
+    width: calc(50% - 25px);
+    background-color: #f0f0f0;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    border-radius: 20px;
+    text-align: center;
+    
+  }
+
+  .title {
+    margin-top: 20px;
+    margin-bottom: 40px;
+    font-size: large;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 600;
+  }
+
+  .post-title{
+    margin-top: 10px;
+    width: 400px;
+    margin-left: 90px;
+    margin-bottom: 30px;
+    height: 35px;
+  }
+
+  .post-img{
+    margin-top: 20px;
+    width: 400px;
+    margin-left: 90px;
+    margin-bottom: 30px;
+    height: 35px;
+  }
+
+  .post-desc{
+    margin-top: 20px;
+    width: 400px;
+    margin-left: 90px;
+    margin-bottom: 40px;
+    height: 35px;
+  }
+
+  .post-button{
+    width: 100px;
+    margin-bottom: 20px;
+    height: 35px;
+  }
