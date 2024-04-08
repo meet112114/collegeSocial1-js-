@@ -1,0 +1,49 @@
+.container {
+    display: flex;
+    justify-content: space-between;
+    width: 100vw; 
+    height: 90vh; 
+    justify-content: center;
+    border-radius: 30px;
+    margin-top: 10px;
+  }
+  
+  .left-div, .right-div {
+    width: calc(50% - 15px);
+    background-color: #f0f0f0;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    text-align: center;
+    overflow-y: auto;
+  }
+
+  .obj{
+    background-color:slategrey;
+    color: white;
+    border-radius: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .name{
+    color: #f0f0f0;
+  }
+
+  .id {
+    color: #f0f0f0;
+  }
+
+  .yd {
+    color: #f0f0f0;
+  }
+
+  .complaint {
+    color: #f0f0f0;
+  }
+
+  .sport {
+    color: #f0f0f0;
+  }

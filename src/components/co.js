@@ -13,6 +13,13 @@ const Co = () => {
     text: '',
   });
 
+  const [lec, SetLec] = useState({
+    title: '',
+    link: '',
+    time:'',
+    password:''
+  });
+
   const handleChange = (e) => {
     setPostData({
       ...postData,
@@ -57,6 +64,46 @@ const Co = () => {
     });
     
   }
+
+
+
+  const handleChangeLec = (e) => {
+    SetLec({
+      ...lec,
+      [e.target.name]: e.target.value
+    });
+  };
+
+  const handleSubmitLec = () => {
+    const formData2 = new FormData();
+    formData2.append('title', lec.title);
+    formData2.append('time', lec.time);
+    formData2.append('link', lec.link);
+    formData2.append('password', lec.password);
+
+    console.log(formData2)
+    fetch('http://localhost:8000/lecture/create/co/', {
+      method: 'POST',
+      body: formData2
+    })
+    .then(response => response.json())
+    .then(data => {
+      console.log('Success:', data);
+      SetLec({
+        title:'',
+        time: '',
+        link:'',
+        password:'',
+      });
+    })
+    .catch(error => {
+      console.error('Error:', error);
+    });
+    
+  }
+
+
+
 
   const handleSubmit = () => {
     const formData = new FormData();
@@ -121,13 +168,52 @@ const Co = () => {
             placeholder='Description'
           />
           <button className='post-button' onClick={handleSubmit}>SUBMIT</button>
+         
         </div>
 
 
         <div className="right-div">
-        <div className='title'>Announcements</div>
+        
+          
+          <div className='lec-title'>Add lectures</div>
           <input
-            className='post-title'
+            className='lec-input'
+            type='text'
+            name='title'
+            value={lec.title}
+            onChange={handleChangeLec}
+            placeholder='classYear and Subject'
+          />
+          <input
+            className='lec-input'
+            type='text'
+            name='time'
+            value={lec.time}
+            onChange={handleChangeLec}
+            placeholder='Date/Day and Time'
+          />
+          <input
+            className='lec-input'
+            type='text'
+            name='link'
+            value={lec.link}
+            onChange={handleChangeLec}
+            placeholder='link'
+          />
+          <input
+            className='lec-input'
+            type='text'
+            name='password'
+            value={lec.password}
+            onChange={handleChangeLec}
+            placeholder='Password'
+          />
+          <button className='post-button' onClick={handleSubmitLec} >SUBMIT</button>
+
+
+          <div className='lec-title'>Announcements</div>
+          <input
+            className='lec-input '
             type='text'
             name='text'
             value={text.text}

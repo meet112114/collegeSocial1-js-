@@ -34,7 +34,7 @@
 
   .title {
     margin-top: 20px;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
     font-size: large;
     font-family: 'Courier New', Courier, monospace;
     font-weight: 600;
@@ -49,7 +49,7 @@
   }
 
   .post-img{
-    margin-top: 20px;
+    margin-top: 10px;
     width: 400px;
     margin-left: 90px;
     margin-bottom: 30px;
@@ -57,15 +57,29 @@
   }
 
   .post-desc{
-    margin-top: 20px;
+    margin-top: 10px;
     width: 400px;
     margin-left: 90px;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
     height: 35px;
   }
 
   .post-button{
     width: 100px;
-    margin-bottom: 20px;
+    height: 35px;
+  }
+
+  .lec-title {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: large;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 600;
+  }
+  .lec-input{
+    margin-top: 10px;
+    width: 400px;
+    margin-left: 90px;
+    margin-bottom: 10px;
     height: 35px;
   }

@@ -6,6 +6,7 @@ import Me from "./components/me";
 import Co from "./components/co";
 import Ee from "./components/ee";
 import Ej from "./components/ej";
+import AdminPage  from "./components/admin";
 
 function App() {
 
@@ -18,6 +19,7 @@ function App() {
       <Route  path='/ej' element={ <Ej/>}/>
       <Route  path='/me' element={ <Me/>}/>
       <Route  path='/co' element={ <Co/>}/>
+      <Route  path='/admin' element={ <AdminPage/>}/>
       </Routes>
     )
   }; 
