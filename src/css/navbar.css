@@ -1,0 +1,48 @@
+.navbarclass {
+    height: 70px; /* Adjust height */
+    font-family: 'Arial', sans-serif; /* Change font */
+    font-size: 1rem; /* Adjust font size */
+    background-color: #818181; /* Optional: Change background color */
+    
+  }
+  
+  .navbarclass .nav-link {
+    font-family: monospace;
+    font-size: 1.2rem; /* Adjust link font size */
+    font-weight: 500; /* Optional: Adjust font weight */
+    color: #363636; /* Change link color */
+  }
+  
+  .navbarclass .nav-link:hover {
+    color: #3a3a3a; /* Hover effect */
+    scale: 1.1;
+    font-weight: 600;
+  }
+
+  .navbarclass {
+    background-color: #ffffff; /* Optional: Set a background color */
+    padding: 10px 0;
+}
+
+.navbar-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%; /* Make the menu span the entire navbar */
+}
+
+.nav-item {
+    margin: 0 10px; /* Add spacing between menu items */
+
+}
+
+.nav-link {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #ffffff; /* Menu item color */
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #007bff; /* Hover color */
+}

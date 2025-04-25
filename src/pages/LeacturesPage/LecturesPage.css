@@ -1,0 +1,60 @@
+.lectures-page {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.dept-select {
+  display: block;
+  margin: 0 auto;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+
+.loading {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #555;
+}
+
+.lecture-list {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.lecture-item {
+  background-color: #f9f9f9;
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.lecture-item h4 {
+  font-size: 1.4rem;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.lecture-item p {
+  font-size: 1rem;
+  color: #555;
+  margin: 5px 0;
+}
+
+.lecture-item a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.lecture-item a:hover {
+  text-decoration: underline;
+}

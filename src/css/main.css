@@ -1,85 +1,78 @@
+/* main.css */
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to right, #e3f2fd, #fff);
+  color: #333;
+}
+
 .container-min {
-    background-color: rgb(184, 184, 184);
-    width: 100vw; 
-    height: 15vh; 
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding-top: 15px;
-    border-radius: 50px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: larger;
-  }
+  text-align: center;
+  padding: 1rem;
+  background-color: #1976d2;
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
 .container {
-    display: flex;
-    justify-content: space-between;
-    width: 100vw; 
-    height: 70vh; 
-    justify-content: center;
-    border-radius: 30px;
-    margin-top: 20px;
-  }
-  
-  .left-div, .right-div {
-    width: calc(50% - 25px);
-    background-color: #f0f0f0;
-    margin-left: 20px;
-    margin-right: 20px;
-    margin-top: 50px;
-    margin-bottom: 50px;
-    border-radius: 20px;
-    text-align: center;
-    
-  }
+  display: flex;
+  justify-content: space-around;
+  padding: 2rem;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
 
-  .title {
-    margin-top: 20px;
-    margin-bottom: 30px;
-    font-size: large;
-    font-family: 'Courier New', Courier, monospace;
-    font-weight: 600;
-  }
+.left-div, .right-div {
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 500px;
+}
 
-  .post-title{
-    margin-top: 10px;
-    width: 400px;
-    margin-left: 90px;
-    margin-bottom: 30px;
-    height: 35px;
-  }
+.title, .lec-title {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #1976d2;
+  margin-bottom: 0.8rem;
+}
 
-  .post-img{
-    margin-top: 10px;
-    width: 400px;
-    margin-left: 90px;
-    margin-bottom: 30px;
-    height: 35px;
-  }
+input[type='text'], input[type='file'] {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+}
 
-  .post-desc{
-    margin-top: 10px;
-    width: 400px;
-    margin-left: 90px;
-    margin-bottom: 30px;
-    height: 35px;
-  }
+input[type='text']:focus {
+  border-color: #1976d2;
+  outline: none;
+  box-shadow: 0 0 5px rgba(25, 118, 210, 0.3);
+}
 
-  .post-button{
-    width: 100px;
-    height: 35px;
-  }
+.post-button {
+  background-color: #1976d2;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
 
-  .lec-title {
-    margin-top: 20px;
-    margin-bottom: 10px;
-    font-size: large;
-    font-family: 'Courier New', Courier, monospace;
-    font-weight: 600;
-  }
-  .lec-input{
-    margin-top: 10px;
-    width: 400px;
-    margin-left: 90px;
-    margin-bottom: 10px;
-    height: 35px;
-  }
+.post-button:hover {
+  background-color: #0d47a1;
+}
+
+img {
+  margin-top: 0.5rem;
+  border-radius: 8px;
+  object-fit: cover;
+}

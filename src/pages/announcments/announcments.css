@@ -1,0 +1,74 @@
+/* Container styling */
+.announce-page {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background: #fdfdfd;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  /* Header */
+  .announce-page h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  /* Department Dropdown */
+  .dept-select {
+    display: block;
+    margin: 0 auto 30px auto;
+    padding: 10px 15px;
+    font-size: 1rem;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    background-color: #f8f8f8;
+    cursor: pointer;
+    transition: border-color 0.3s;
+  }
+  
+  .dept-select:focus {
+    border-color: #007bff;
+    outline: none;
+  }
+  
+  /* Announcement List */
+  .announcement-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  /* Individual Announcement Card */
+  .announcement-card {
+    background: #ffffff;
+    border: 1px solid #e0e0e0;
+    padding: 16px 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .announcement-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  }
+  
+  /* Text Content */
+  .announcement-card p {
+    margin: 0 0 10px 0;
+    color: #222;
+    font-size: 1.05rem;
+    line-height: 1.5;
+  }
+  
+  /* Timestamp */
+  .announcement-card small {
+    color: #777;
+    font-size: 0.9rem;
+  }
+  
+  

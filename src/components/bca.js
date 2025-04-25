@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import '../css/main.css';
 
-const Co = () => {
+const BCA = () => {
   
   const [postData, setPostData] = useState({
     title: '',
@@ -45,10 +45,10 @@ const Co = () => {
     formData1.append('text', text.text);
 
     console.log(formData1)
-    fetch('http://localhost:8000/announce/co/', {
+    fetch('http://localhost:8000/announce/bca/', {
       method: 'POST',
       headers: {
-        'Authorization': `Token eb58d9f8f4b88ea5f8f74e26c8951332b00157ae`
+        'Authorization': `Token 67298da80d6dfcc25fd3e18367b6421cac9d8729`
       },
       body: formData1
     })
@@ -82,7 +82,7 @@ const Co = () => {
     formData2.append('password', lec.password);
 
     console.log(formData2)
-    fetch('http://localhost:8000/lecture/create/co/', {
+    fetch('http://localhost:8000/lecture/create/bca/', {
       method: 'POST',
       body: formData2
     })
@@ -107,7 +107,7 @@ const Co = () => {
 
   const handleSubmit = () => {
     const formData = new FormData();
-    const username = 'Co_Dept'
+    const username = 'BCA_Dept'
     formData.append('title', postData.title);
     formData.append('description', postData.description);
     formData.append('image', postData.image);
@@ -116,7 +116,7 @@ const Co = () => {
     fetch('http://localhost:8000/post/create/', {
       method: 'POST',
       headers: {
-        'Authorization': `Token eb58d9f8f4b88ea5f8f74e26c8951332b00157ae`
+        'Authorization': `Token 67298da80d6dfcc25fd3e18367b6421cac9d8729`
       },
       body: formData
     })
@@ -138,7 +138,7 @@ const Co = () => {
   return (
     <>
       <div className="container-min">
-        <h1>CO Admin Page</h1>
+        <h1>BCA Admin Page</h1>
       </div>
       <div className="container">
         <div className="left-div">
@@ -161,6 +161,7 @@ const Co = () => {
             <img src={URL.createObjectURL(postData.image)} alt="Selected" style={{ width: '100px', height: '100px' }} />
           )}
           <input
+           type='text'
             className='post-desc'
             name='description'
             value={postData.description}
@@ -227,4 +228,4 @@ const Co = () => {
   );
 };
 
-export default Co;
+export default BCA;

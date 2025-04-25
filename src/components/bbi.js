@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import '../css/main.css';
 
-const Co = () => {
+const BBI = () => {
   
   const [postData, setPostData] = useState({
     title: '',
@@ -45,10 +45,10 @@ const Co = () => {
     formData1.append('text', text.text);
 
     console.log(formData1)
-    fetch('http://localhost:8000/announce/me/', {
+    fetch('http://localhost:8000/announce/bbi/', {
       method: 'POST',
       headers: {
-        'Authorization': `Token 48b8f153d7013169cf003ba0cd3b56945033d1cb`
+        'Authorization': `Token 03c74060fcbb3248f8eb9b049b7312e0c31b4e93`
       },
       body: formData1
     })
@@ -82,7 +82,7 @@ const Co = () => {
     formData2.append('password', lec.password);
 
     console.log(formData2)
-    fetch('http://localhost:8000/lecture/create/me/', {
+    fetch('http://localhost:8000/lecture/create/bbi/', {
       method: 'POST',
       body: formData2
     })
@@ -107,7 +107,7 @@ const Co = () => {
 
   const handleSubmit = () => {
     const formData = new FormData();
-    const username = 'Me_Dept'
+    const username = 'BBI_Dept'
     formData.append('title', postData.title);
     formData.append('description', postData.description);
     formData.append('image', postData.image);
@@ -116,7 +116,7 @@ const Co = () => {
     fetch('http://localhost:8000/post/create/', {
       method: 'POST',
       headers: {
-        'Authorization': `Token 48b8f153d7013169cf003ba0cd3b56945033d1cb`
+        'Authorization': `Token 03c74060fcbb3248f8eb9b049b7312e0c31b4e93`
       },
       body: formData
     })
@@ -138,7 +138,7 @@ const Co = () => {
   return (
     <>
       <div className="container-min">
-        <h1>ME Admin Page</h1>
+        <h1>BBI Admin Page</h1>
       </div>
       <div className="container">
         <div className="left-div">
@@ -161,6 +161,7 @@ const Co = () => {
             <img src={URL.createObjectURL(postData.image)} alt="Selected" style={{ width: '100px', height: '100px' }} />
           )}
           <input
+           type='text'
             className='post-desc'
             name='description'
             value={postData.description}
@@ -227,4 +228,4 @@ const Co = () => {
   );
 };
 
-export default Co;
+export default BBI;
