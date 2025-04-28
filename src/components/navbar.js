@@ -7,7 +7,7 @@ import "../css/navbar.css";
 
 const Navbar = () => {
     const { state, dispatch } = useContext(UserContext);
-    const { student , teacher } = state;
+    const { student , teacher , admin} = state;
     const navigate = useNavigate(); // For redirecting
 
     const token = localStorage.getItem("token");
@@ -35,8 +35,8 @@ const Navbar = () => {
           navigate('/baf');
           break;
         case 'a3a3aff90439be49b9a54103a39eb6f2de631a9d':
-          dispatch({ type: "TEACHER_LOGIN", payload: true });
-          navigate('/admin');
+          dispatch({ type: "ADMIN_LOGIN", payload: true });
+          navigate('/adminPost');
             break;
         default:  
           dispatch({ type: "STUDENT_LOGIN", payload: true });
@@ -68,7 +68,21 @@ const Navbar = () => {
           </li>
                 </>
             );
-        } else {
+        } else if (admin) {
+          return (
+              <>
+                 <li className="nav-item"><NavLink className="nav-link" to="/posts">Posts</NavLink></li>
+              <li className="nav-item"><NavLink className="nav-link" to="/announcements">Announcements</NavLink></li>
+              <li className="nav-item"><NavLink className="nav-link" to="/admin">Activity</NavLink></li>
+              <li className="nav-item"><NavLink className="nav-link" to="/adminManage">Content</NavLink></li>
+                 <li className="nav-item">
+          <button className="nav-link btn btn-link" onClick={handlePanelRedirect}>
+            Panel
+          </button>
+        </li>
+              </>
+          );
+      }else {
             return (
                 <>
                 

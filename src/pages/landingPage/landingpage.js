@@ -25,7 +25,10 @@ const LandingPage = () => {
       const data = await response.json();
       console.log(data.message)
 
-      if (!response.ok) throw new Error(data.message || 'Login failed');
+      
+    if (!response.ok || data.success === false) {
+      throw new Error(data.message || 'Login failed');
+    }
 
       
       const token = data.message;
@@ -55,7 +58,7 @@ const LandingPage = () => {
             dispatch({ type: "TEACHER_LOGIN", payload: true });
             navigate('/baf');
           case 'a3a3aff90439be49b9a54103a39eb6f2de631a9d':
-            dispatch({ type: "TEACHER_LOGIN", payload: true });
+            dispatch({ type: "ADMIN_LOGIN", payload: true });
             navigate('/admin');
 
             break;

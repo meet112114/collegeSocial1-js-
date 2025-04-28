@@ -16,6 +16,7 @@ import LecturesPage from './pages/LeacturesPage/LeacturesPage';
 import StudentActivityPage from './pages/studentActivity/studentActivity';
 import StudentRegister from './pages/studentRegister/studentRegister';
 import AdminContentManagement from './pages/contentManagment/contentmanagement';
+import AP from './components/adminPost';
 
 import { initialState, reducer } from "./reducer/userReducer";
 export const UserContext = createContext();
@@ -43,6 +44,7 @@ function App() {
   <Route  path='/activity' element={ <StudentActivityPage/>}/>
   <Route  path='/register' element={ <StudentRegister/>}/>
   <Route  path='/adminManage' element={ <AdminContentManagement/>}/>
+  <Route  path='/adminpost' element={ <AP/>}/>
   </Routes>
     </Router>
   </UserContext.Provider>
